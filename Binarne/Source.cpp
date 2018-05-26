@@ -1,0 +1,266 @@
+//Part of the code is from the side:
+//http://quiz.geeksforgeeks.org/binary-search-tree-set-2-delete/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include <cstdlib>
+#include <cstdio>
+#include <ctime>
+
+int wstawianie, usuwanie, szukane;
+
+struct node
+{
+	int key;
+	struct node *left, *right;
+};
+
+// A utility function to create a new BST node
+struct node *newNode(int item)
+{
+	struct node *temp = (struct node *)malloc(sizeof(struct node));
+	temp->key = item;
+	temp->left = temp->right = NULL;
+	return temp;
+}
+
+// A utility function to do inorder traversal of BST
+void inorder(struct node *root)
+{
+	if (root != NULL)
+	{
+		inorder(root->left);
+		printf("%d ", root->key);
+		inorder(root->right);
+	}
+}
+
+/* A utility function to insert a new node with given key in BST */
+struct node* insert(struct node* node, int key)
+{
+	wstawianie++;
+
+	/* If the tree is empty, return a new node */
+	if (node == NULL) return newNode(key);
+
+	/* Otherwise, recur down the tree */
+	if (key < node->key)
+		node->left = insert(node->left, key);
+	else
+		node->right = insert(node->right, key);
+
+	/* return the (unchanged) node pointer */
+	return node;
+}
+
+/* Given a non-empty binary search tree, return the node with minimum
+key value found in that tree. Note that the entire tree does not
+need to be searched. */
+struct node * minValueNode(struct node* node)
+{
+	struct node* current = node;
+
+	/* loop down to find the leftmost leaf */
+	while (current->left != NULL)
+		current = current->left;
+
+	return current;
+}
+
+/* Given a binary search tree and a key, this function deletes the key
+and returns the new root */
+struct node* deleteNode(struct node* root, int key)
+{
+
+	usuwanie++;
+
+	// base case
+	if (root == NULL) return root;
+
+	// If the key to be deleted is smaller than the root's key,
+	// then it lies in left subtree
+	if (key < root->key)
+		root->left = deleteNode(root->left, key);
+
+	// If the key to be deleted is greater than the root's key,
+	// then it lies in right subtree
+	else if (key > root->key)
+		root->right = deleteNode(root->right, key);
+
+	// if key is same as root's key, then This is the node
+	// to be deleted
+	else
+	{
+		// node with only one child or no child
+		if (root->left == NULL)
+		{
+			struct node *temp = root->right;
+			free(root);
+			return temp;
+		}
+		else if (root->right == NULL)
+		{
+			struct node *temp = root->left;
+			free(root);
+			return temp;
+		}
+
+		// node with two children: Get the inorder successor (smallest
+		// in the right subtree)
+		struct node* temp = minValueNode(root->right);
+
+		// Copy the inorder successor's content to this node
+		root->key = temp->key;
+
+		// Delete the inorder successor
+		root->right = deleteNode(root->right, temp->key);
+	}
+	return root;
+}
+
+bool szukanie(node *root, int key)
+{
+
+	node *tymczas = root;
+	while (tymczas != NULL)
+	{
+		szukane++;
+
+		//operacje_wyszukania++;
+		if (tymczas->key == key)
+		{
+			return true;
+		}
+		else
+		{
+			if (key > tymczas->key)
+			{
+				tymczas = tymczas->right;
+			}
+			else
+			{
+				tymczas = tymczas->left;
+			}
+		}
+	}
+	return false;
+}
+
+
+
+
+
+// Driver Program to test above functions
+int main()
+{
+	/* Let us create following BST
+	50
+	/     \
+	30      70
+	/  \    /  \
+	20   40  60   80 */
+
+	srand(time(NULL));
+
+	FILE * binarne;
+	//smieszne wymysly visuala do secure fopen
+	errno_t err;
+
+	err = fopen_s(&binarne,"binarne.txt", "w");
+
+	int i, N,k,m,n;
+	wstawianie = 0;
+	usuwanie = 0;
+	struct node *root = NULL;
+
+
+	for (n = 0; n < 4; n++)
+	{
+
+		printf("Podaj N: ");
+		scanf_s("%i", &N);
+		printf("\n");
+
+		fprintf(binarne, "Dla N rownego %i \n\n", N);
+
+
+		for (m = 0; m < 20; m++)
+		{
+
+			for (i = 0; i < N; i++)
+			{
+				root = insert(root, rand() % 10000);
+			}
+
+
+			//printf("Inorder traversal of the given tree \n");
+			//inorder(root);
+			printf("\n");
+			printf("\n\n");
+
+
+			bool istnienie = 0;
+
+			usuwanie = 0;
+			printf("Jaki element chcesz usunac: ");
+			//scanf_s("%i", &k);
+
+			while (istnienie == 0)
+			{
+				k = rand() % 10000;
+
+				if (szukanie(root, k) == true)
+				{
+					printf("%i\n", k);
+					root = deleteNode(root, k);
+					istnienie = 1;
+				}
+			}
+
+
+			printf("Jaki element chcesz dodaæ: ");
+			//scanf_s("%i", &k);
+			k = rand() % 10000;
+			printf("%i\n", k);
+
+			root = insert(root, k);
+
+			printf("Wpisz element, ktory chcesz znalezc: ");
+			//scanf_s("%i", &k);
+			k = rand() % 10000;
+			printf("%i\n", k);
+
+			szukane = 0;
+
+			if (szukanie(root, k) == true)
+			{
+				printf("Element %i znajduje sie w drzewie", k);
+				printf("\n");
+			}
+			else
+			{
+				printf("Element %i nie znajduje sie w drzewie", k);
+				printf("\n");
+			}
+			printf("\n\n");
+
+
+
+			//printf("Inorder traversal of the modified tree \n");
+			//inorder(root);
+
+			printf("\n\n");
+			printf("Usuwanie %i Wstawianie %i Szukane %i \n", usuwanie, wstawianie, szukane);
+			fprintf(binarne, "Usuwanie %i Wstawianie %i Szukane %i \n", usuwanie, wstawianie, szukane);
+			wstawianie = 0;
+			usuwanie = 0;
+			szukane = 0;
+		}
+		fprintf(binarne, "--------------------------------------------------------- \n");
+	}
+
+
+	system("PAUSE");
+
+	return 0;
+}

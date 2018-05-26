@@ -1,0 +1,92 @@
+Dla N rownego 100 
+
+Usuwanie 14 Wstawianie 859 Szukane 8 
+Usuwanie 11 Wstawianie 1154 Szukane 6 
+Usuwanie 10 Wstawianie 1339 Szukane 16 
+Usuwanie 13 Wstawianie 1316 Szukane 17 
+Usuwanie 12 Wstawianie 1441 Szukane 17 
+Usuwanie 10 Wstawianie 1417 Szukane 15 
+Usuwanie 16 Wstawianie 1515 Szukane 15 
+Usuwanie 12 Wstawianie 1449 Szukane 16 
+Usuwanie 15 Wstawianie 1580 Szukane 14 
+Usuwanie 21 Wstawianie 1581 Szukane 14 
+Usuwanie 14 Wstawianie 1576 Szukane 14 
+Usuwanie 14 Wstawianie 1581 Szukane 22 
+Usuwanie 23 Wstawianie 1584 Szukane 12 
+Usuwanie 24 Wstawianie 1646 Szukane 18 
+Usuwanie 20 Wstawianie 1649 Szukane 5 
+Usuwanie 18 Wstawianie 1636 Szukane 10 
+Usuwanie 11 Wstawianie 1599 Szukane 10 
+Usuwanie 25 Wstawianie 1652 Szukane 16 
+Usuwanie 15 Wstawianie 1686 Szukane 14 
+Usuwanie 13 Wstawianie 1622 Szukane 16 
+--------------------------------------------------------- 
+Dla N rownego 200 
+
+Usuwanie 16 Wstawianie 3361 Szukane 16 
+Usuwanie 22 Wstawianie 3444 Szukane 18 
+Usuwanie 20 Wstawianie 3456 Szukane 9 
+Usuwanie 14 Wstawianie 3533 Szukane 12 
+Usuwanie 19 Wstawianie 3581 Szukane 16 
+Usuwanie 17 Wstawianie 3541 Szukane 14 
+Usuwanie 14 Wstawianie 3606 Szukane 10 
+Usuwanie 13 Wstawianie 3649 Szukane 18 
+Usuwanie 22 Wstawianie 3703 Szukane 19 
+Usuwanie 15 Wstawianie 3644 Szukane 13 
+Usuwanie 23 Wstawianie 3739 Szukane 24 
+Usuwanie 14 Wstawianie 3573 Szukane 21 
+Usuwanie 16 Wstawianie 3745 Szukane 21 
+Usuwanie 21 Wstawianie 3783 Szukane 17 
+Usuwanie 26 Wstawianie 3737 Szukane 15 
+Usuwanie 11 Wstawianie 3765 Szukane 23 
+Usuwanie 23 Wstawianie 3753 Szukane 9 
+Usuwanie 27 Wstawianie 3665 Szukane 16 
+Usuwanie 20 Wstawianie 3887 Szukane 8 
+Usuwanie 20 Wstawianie 3840 Szukane 22 
+--------------------------------------------------------- 
+Dla N rownego 400 
+
+Usuwanie 16 Wstawianie 7811 Szukane 21 
+Usuwanie 16 Wstawianie 7693 Szukane 20 
+Usuwanie 15 Wstawianie 7751 Szukane 12 
+Usuwanie 19 Wstawianie 7752 Szukane 17 
+Usuwanie 10 Wstawianie 7977 Szukane 15 
+Usuwanie 25 Wstawianie 7880 Szukane 26 
+Usuwanie 19 Wstawianie 7904 Szukane 24 
+Usuwanie 15 Wstawianie 8031 Szukane 13 
+Usuwanie 26 Wstawianie 7988 Szukane 20 
+Usuwanie 13 Wstawianie 8093 Szukane 12 
+Usuwanie 20 Wstawianie 8238 Szukane 25 
+Usuwanie 18 Wstawianie 8165 Szukane 24 
+Usuwanie 16 Wstawianie 8127 Szukane 21 
+Usuwanie 20 Wstawianie 8167 Szukane 12 
+Usuwanie 19 Wstawianie 8118 Szukane 17 
+Usuwanie 19 Wstawianie 8103 Szukane 19 
+Usuwanie 16 Wstawianie 8263 Szukane 30 
+Usuwanie 33 Wstawianie 8377 Szukane 14 
+Usuwanie 26 Wstawianie 8265 Szukane 2 
+Usuwanie 22 Wstawianie 8476 Szukane 26 
+--------------------------------------------------------- 
+Dla N rownego 800 
+
+Usuwanie 13 Wstawianie 16705 Szukane 9 
+Usuwanie 24 Wstawianie 16777 Szukane 22 
+Usuwanie 12 Wstawianie 16923 Szukane 21 
+Usuwanie 23 Wstawianie 16901 Szukane 17 
+Usuwanie 21 Wstawianie 17284 Szukane 20 
+Usuwanie 16 Wstawianie 17309 Szukane 26 
+Usuwanie 16 Wstawianie 17206 Szukane 19 
+Usuwanie 19 Wstawianie 17442 Szukane 22 
+Usuwanie 18 Wstawianie 17589 Szukane 15 
+Usuwanie 14 Wstawianie 17656 Szukane 14 
+Usuwanie 15 Wstawianie 17628 Szukane 19 
+Usuwanie 21 Wstawianie 18030 Szukane 29 
+Usuwanie 24 Wstawianie 17753 Szukane 22 
+Usuwanie 17 Wstawianie 17775 Szukane 18 
+Usuwanie 18 Wstawianie 17975 Szukane 17 
+Usuwanie 25 Wstawianie 17997 Szukane 10 
+Usuwanie 25 Wstawianie 17820 Szukane 13 
+Usuwanie 31 Wstawianie 18398 Szukane 11 
+Usuwanie 18 Wstawianie 18402 Szukane 14 
+Usuwanie 16 Wstawianie 18432 Szukane 14 
+--------------------------------------------------------- 
